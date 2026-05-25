@@ -1,0 +1,46 @@
+name: SkinUtils
+version: ${project.version}
+main: com.alexander.skinutils.SkinUtils
+api-version: 1.16
+description: Advanced multilingual skin management plugin
+author: Alexander
+
+commands:
+  skin:
+    description: Skin management command
+    usage: /<command> <subcommand>
+    aliases: [skinutils, su]
+
+permissions:
+  skinutils.use:
+    description: Base permission
+    default: true
+  skinutils.set:
+    description: Set skin from premium player
+    default: true
+  skinutils.url:
+    description: Set skin from URL
+    default: true
+  skinutils.random:
+    description: Use random skin
+    default: true
+  skinutils.copy:
+    description: Copy skin from another player
+    default: true
+  skinutils.reset:
+    description: Reset skin
+    default: true
+  skinutils.reload:
+    description: Reload plugin
+    default: op
+  skinutils.admin:
+    description: Full admin access
+    default: op
+    children:
+      skinutils.use: true
+      skinutils.set: true
+      skinutils.url: true
+      skinutils.random: true
+      skinutils.copy: true
+      skinutils.reset: true
+      skinutils.reload: true

@@ -1,0 +1,36 @@
+language: es
+
+storage:
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    database: skinutils
+    username: root
+    password: ""
+    pool-size: 10
+
+settings:
+  cooldown-seconds: 30
+  cache-expiry-minutes: 60
+  history-max-size: 10
+  allowed-domains:
+    - "imgur.com"
+    - "i.imgur.com"
+    - "minecraft.net"
+    - "crafatar.com"
+    - "minotar.net"
+    - "mc-heads.net"
+    - "namemc.com"
+    - "mineskin.org"
+
+webhook:
+  enabled: false
+  # Вариант 1: Webhook URL (вставь ссылку из настроек канала Discord)
+  url: ""
+  # Вариант 2: Бот Токен + Айди канала (Отправляет сообщение иммено в указанный канал.)
+  bot-token: ""
+  channel-id: ""
+  # Настройки
+  username: "SkinUtils"
+  avatar-url: "https://crafatar.com/avatars/069a79f444e94726a5befca90e38aaf5?size=128"
